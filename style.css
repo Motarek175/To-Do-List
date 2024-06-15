@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* start input */
+.header {
+  padding: 30px 40px;
+  text-align: center;
+  overflow: hidden;
+  background-color: #f44336;
+  color: white;
+}
+
+.header h2 {
+  padding-bottom: 15px;
+}
+
+.header input {
+  margin: 0;
+  border: none;
+  outline: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.header span {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: right;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* end input */
+
+/* start tasks */
+ul li {
+  list-style-type: none;
+  padding: 12px 40px;
+  font-size: 18px;
+  border-bottom: 1px solid black;
+  position: relative;
+  cursor: pointer;
+}
+
+ul li:hover,
+ul .done {
+  background-color: #ddd;
+}
+
+ul li .wrong {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 40px;
+}
+
+ul li .true {
+  position: absolute;
+  right: 80px;
+  top: 0;
+  padding: 12px 40px;
+}
+
+ul li .wrong:hover {
+  background-color: #f44336;
+}
+
+ul li .true:hover {
+  background-color: #1df92c;
+}
+
+ul .done::first-line {
+  text-decoration: line-through #1df92c 2px double;
+}
+
+ul li .true i {
+  scale: 1;
+  transition: scale 0.3s ease;
+}
+
+ul .done .true i,
+ul .done .true:hover {
+  scale: 0;
+  background-color: transparent;
+  transition: scale 0.3s ease;
+}
+/* end tasks */
